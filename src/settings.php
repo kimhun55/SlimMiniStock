@@ -15,5 +15,15 @@ return [
             'path' => isset($_ENV['docker']) ? 'php://stdout' : __DIR__ . '/../logs/app.log',
             'level' => \Monolog\Logger::DEBUG,
         ],
+        //config connect database
+        'db' =>[
+            'host' => 'localhost',
+            'dbname' => 'stockrestdb',
+            'username' => 'root',
+            'password' => 'root'
+        ],
+        "jwt" => [
+            'secret' => 'kimhun55081557570sfsdfsdfsdf62020'
+        ],
     ],
 ];
