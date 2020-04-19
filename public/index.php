@@ -19,21 +19,21 @@ $settings = require __DIR__ . '/../src/settings.php';
 
 $app = new \Slim\App($settings);
 
-$c = new \Slim\Container(); //Create Your container
+// $c = new \Slim\Container(); //Create Your container
 
-//Create Slim
-$app = new \Slim\App($c);
+// //Create Slim
+// $app = new \Slim\App($c);
 
 //... Your code
 
 //Override the default Not Found Handler after App
-unset($app->getContainer()['notFoundHandler']);
-$app->getContainer()['notFoundHandler'] = function ($c) {
-    return function ($request, $response) use ($c) {
-        $response = new \Slim\Http\Response(404);
-        return $response->write("Page not found");
-    };
-};
+// unset($app->getContainer()['notFoundHandler']);
+// $app->getContainer()['notFoundHandler'] = function ($c) {
+//     return function ($request, $response) use ($c) {
+//         $response = new \Slim\Http\Response(404);
+//         return $response->write("Page not found");
+//     };
+// };
 
 
 // $app->add(new Tuupola\Middleware\HttpBasicAuthentication([
